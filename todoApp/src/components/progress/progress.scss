@@ -1,0 +1,8 @@
+#progressBar{
+    float: right;
+    color: blue;
+    font-size: 25px;
+}
+progress:not([value]){
+    background-color: gainsboro;
+}

@@ -1,0 +1,22 @@
+.status button{
+    font-size: 25px;
+    margin: 5px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 0.2cm;
+    border: 2px solid black;
+    width: 25%;
+    cursor: pointer;
+}
+.todo{
+    color: white;
+    background-color: crimson;
+}
+.progress{
+    color: white;
+    background-color: goldenrod;
+}
+.completed{
+    color: white;
+    background-color: green;
+}

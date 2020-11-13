@@ -1,0 +1,39 @@
+$color:rgb(24, 231, 221);
+body{
+    // background-image: url("wood-desktop-wooden-aerial.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    margin: 0;
+    font-family: tahoma;
+    background-color: black;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: black;
+    border-bottom: 1px solid white;
+  }
+  .links{
+    font-size: 20px;
+    margin:5px;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    &:hover{
+      cursor: pointer;
+      color: crimson;
+      background-color: white;
+    }
+  }
+  .active{
+    color: $color; 
+  }
+  #main{
+    color: $color;
+    float: left;
+    margin-left: 1%;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 5px;
+  }
