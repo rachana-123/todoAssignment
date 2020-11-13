@@ -2,6 +2,7 @@ import React from 'react';
 import './addItem.scss';
 
 class AddItem extends React.Component{
+    state={valid:true};
     handleSubmit=e=>{
         e.preventDefault();
         let isTimeEntered;
@@ -18,14 +19,25 @@ class AddItem extends React.Component{
         document.getElementById("task").value="";
         document.getElementById("timeRequired").value="";
     }
+    checkTime=(e)=>{
+        let time= e.target.value;
+        console.log(time);
+        if(time>0 || time===""){
+            console.log("valid");
+            this.setState({valid:true});
+        }else{
+            console.log("not valid");
+            this.setState({valid:false})
+        }
+    }
     render(){
         return(
             <form id="add-todo" onSubmit={this.handleSubmit}>
                 Add Task:<br/><br/>
                 <input type="text" id="task" placeholder="Enter task" required /><br/><br/>
                 Enter time required for completion: (optional)<br/><br/>
-                <input type="number" id="timeRequired" placeholder="Enter time (in hours)"/><br/><br/>
-                <input type="submit" value={this.props.value} />
+                <input type="number" id="timeRequired" placeholder="Enter time (in hours)" onChange={this.checkTime} className={this.state.valid? "default":"invalid"}/><br/><br/>
+                <input type="submit" value={this.props.value} disabled={!this.state.valid}/>
             </form>
         );
     }   
