@@ -36,8 +36,8 @@ class AddItem extends React.Component{
                 Add Task:<br/><br/>
                 <input type="text" id="task" placeholder="Enter task" required /><br/><br/>
                 Enter time required for completion: (optional)<br/><br/>
-                <input type="number" id="timeRequired" placeholder="Enter time (in hours)" onChange={this.checkTime} className={this.state.valid? "default":"invalid"}/><br/><br/>
-                <input type="submit" value={this.props.value} disabled={!this.state.valid}/>
+                <input type="number" id="timeRequired" placeholder="Enter time (in hours)" step=".01" onChange={this.checkTime} className={this.state.valid? "default":"invalid"}/><br/><br/>
+                <input type="submit" value={this.props.value} disabled={this.state.valid===false}/>
             </form>
         );
     }   
